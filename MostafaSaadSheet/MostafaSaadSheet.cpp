@@ -1,20 +1,65 @@
-// MostafaSaadSheet.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+void VanyaandFence() {
+    int n, h; 
+    cin >> n >> h; 
+
+    int* arr = new int[n];
+
+    int cnt = 0;
+
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+
+        if (arr[i] <= h)
+            cnt++;
+        else
+            cnt += 2;
+
+    }
+    cout << cnt << endl;
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+void AntonDaninkChess() {
+    int n; 
+    cin >> n; 
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+    int cntAnton = 0;
+    int cntDanik = 0;
+
+    for (int i = 0; i < n; i++) {
+        char x; 
+        cin >> x; 
+        if (x == 'D')
+            cntDanik++;
+        else
+            cntAnton++;
+
+    }
+    if (cntAnton == cntDanik)
+        cout << "Friendship" << endl;
+    else if (cntAnton > cntDanik)
+        cout << "Anton" << endl;
+    else
+        cout << "Danik" << endl;
+}
+
+void BearAndBigBrother() {
+    int a, b; 
+    cin >> a >> b;
+    int cnt = 0;
+    while (a <= b) {
+        a *= 3;
+        b *= 2;
+        cnt++;
+    }
+
+    cout << cnt << endl;
+}
+int main()
+{
+    BearAndBigBrother();
+}
+
